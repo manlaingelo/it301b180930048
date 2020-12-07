@@ -59,6 +59,7 @@
                         <li>      
                         <div id="fh5co-logo"><a href="{{ url('/home') }}">   Сайн уу {{ Auth::user()->name }}<span>.</span></a></div>        
                         </li>
+                        
                         @endguest
 						</ul>
 					</div>

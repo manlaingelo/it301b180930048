@@ -23,12 +23,14 @@
 						<div class="col-md-4 col-sm-2 col-md-offset-1 box0">
                   			<div class="box1">
 							<a href="/home/{{$post->slug}}">
-								<img src="{{ Voyager::image( $post->image ) }}" style="width:100%">
+                                <img src="{{ Voyager::image( $post->image ) }}" alt="..." class="img-thumbnail">
 							</a>
                   			</div>
 							  <p>{{ $post->title }}</p>
                   		</div>
 					@endforeach
+					</div>
+					</div>
               </div><!--/row -->
           </section>
       </section>

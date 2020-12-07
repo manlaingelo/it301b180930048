@@ -2271,11 +2271,12 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 .box1 img{
   width: 100%;
+  height: fit-content;
   max-height: 400px;
+  min-width: 200px;
 }
 .box1 span {
 	font-size: 50px;
-
 }
 
 .box1 h3 {

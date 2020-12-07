@@ -16,12 +16,22 @@ Route::get('/', function () {
   return view('welcome',compact('pages'));
 });
 Auth::routes();
-Route::get('/profile', function () {
-  return view('manage.dashboard');
-});
-Route::get('/home', function () {
-  $posts = TCG\Voyager\Models\Post::all();
-  return view('home', compact('posts'));
+
+Route::prefix('home')->group(function () {
+  Route::get('/', function () {
+    $posts = TCG\Voyager\Models\Post::all();
+    return view('home', compact('posts'));
+  });
+  Route::get('/schedule', function(){
+    return view('schedules');
+  });
+  Route::get('/payment', function(){
+    return view('payments');
+  });
+  Route::get('/profile', function () {
+    $route=Auth::routes();
+    return view('profile',compact('route'));
+  });
 });
 
 Route::get('home/{slug}', function($slug){
