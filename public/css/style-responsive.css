@@ -130,7 +130,7 @@
 
     .fc-state-active, .fc-state-active .fc-button-inner, .fc-state-hover, .fc-state-hover .fc-button-inner {
         background: none !important;
-        color: #FFFFFF !important;
+        color: #FFF !important;
     }
 
     .fc-state-default, .fc-state-default .fc-button-inner {

@@ -25,13 +25,13 @@
                @endif
             </div> 
             @endforeach
-         
+  
+            
          </div>
       </div>
    </div>
 </header>
-<!-- second <section>
-   </section> -->
+<!-- second -->
 <div id="fh5co-services" class="fh5co-bg-section">
    <div class="container">
       <div class="row animate-box">
@@ -41,7 +41,7 @@
                @if($page->slug=="logo")
                  <p> {{$page->body}} </p>
                @endif
-               <!-- <p>{{$page}}</p> -->
+              
             @endforeach
          </div>
       </div>
@@ -85,8 +85,7 @@
       </div>
    </div>
 </div>
-<!-- third <section>
-   </section> -->
+<!-- third  -->
 <div id="fh5co-project">
    <div class="container">
       <div class="row animate-box">
@@ -131,8 +130,7 @@
       </div>
    </div>
 </div>
-<!-- 4th <section>
-   </section> -->
+<!-- 4th  -->
 <div id="fh5co-testimonial" class="fh5co-bg-section">
    <div class="container">
       <div class="row animate-box">
@@ -183,8 +181,7 @@
       </div>
    </div>
 </div>
-<!-- 5th <section>
-   </section> -->
+<!-- 5th -->
 <div id="fh5co-started">
    <div class="container">
       <div class="row animate-box">

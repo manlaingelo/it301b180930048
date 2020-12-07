@@ -16,7 +16,9 @@ Route::get('/', function () {
   return view('welcome',compact('pages'));
 });
 Auth::routes();
-
+Route::get('/profile', function () {
+  return view('manage.dashboard');
+});
 Route::get('/home', function () {
   $posts = TCG\Voyager\Models\Post::all();
   return view('home', compact('posts'));

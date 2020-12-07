@@ -7,8 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Fitness site</title>
-
+    <title>@yield('page_title', setting('site.title') . "  " . setting(''))</title>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -46,14 +45,14 @@
 						<ul>
 							@guest
                             @if (Route::has('login'))
-                                <li >
-                                    <a href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <li style="color:white;">
+                                    <a href="{{ route('login') }}">{{ __('Нэвтрэх') }}</a>
                                 </li>
                             @endif
                             
                             @if (Route::has('register'))
                                 <li>
-                                    <a href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a href="{{ route('register') }}">{{ __('Бүртгүүлэх') }}</a>
                                 </li>
                             @endif
                         @else

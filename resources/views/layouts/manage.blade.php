@@ -154,7 +154,7 @@
                      </div>
                   </div>
                   <div id="adminmenu">
-
+                     <admin-menu :items="{{ menu('user', '_json')}}"></admin-menu>                      
                   </div>
                </nav>
             </div>
