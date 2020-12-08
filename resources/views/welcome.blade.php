@@ -104,15 +104,19 @@
                <h3>Project Name</h3>
             </a>
          </div>
-      </div>  
+      </div>
+      @foreach($posts as $post)
+      @if($post->category_id==2)
       <div class="col-forth">
-         <div class="project animate-box" style="background-image:url({{setting('site.logo')}});">
+         <div class="project animate-box" style="background-image:url({{ Voyager::image( $post->image ) }});">
             <a href="#" class="desc">
-               <span></span>
+               <span>{{ $post->title }}</span>
                <h3>Project Name</h3>
             </a>
          </div>
       </div>
+      @endif
+      @endforeach
       <div class="col-forth">
          <div class="project animate-box" style="background-image:url(images/project-2.jpg);">
             <a href="#" class="desc">

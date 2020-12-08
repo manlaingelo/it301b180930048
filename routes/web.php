@@ -13,7 +13,8 @@ middleware('role:superadministrator|administrator|editor|author|contributor')->
 */
 Route::get('/', function () {
   $pages = TCG\Voyager\Models\Page::all();
-  return view('welcome',compact('pages'));
+  $posts = TCG\Voyager\Models\Post::all();
+  return view('welcome',compact('pages','posts'));
 });
 Auth::routes();
 
