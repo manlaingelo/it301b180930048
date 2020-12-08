@@ -54,7 +54,7 @@ body {
 }
 
 a {
-  color: #FC5185;
+  color: #3e3e3e;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -621,7 +621,7 @@ h1, h2, h3, h4, h5, h6, figure {
   padding-left: 90px;
   float: left;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 140px;
   position: relative;
 }
 @media screen and (max-width: 768px) {
@@ -654,7 +654,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .feature-center h3 {
   font-size: 22px;
-  color: #FC5185 !important;
+  color: #1d1c1c !important;
 }
 
 .project-content {
@@ -785,7 +785,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .fhco-cta-block {
-  border: 2px solid #FC5185;
+  border: 2px solid #1d1c1c;
   padding: 30px;
   margin-bottom: 30px;
   float: left;
@@ -794,7 +794,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .fhco-cta-block h2 {
   font-size: 20px;
   margin-bottom: 20px;
-  color: #FC5185;
+  color: #1d1c1c;
 }
 .fhco-cta-block p {
   line-height: 1.5;
@@ -2264,16 +2264,16 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .box1 {
-	padding: 15px;
+  max-height: 300px;
 	text-align: center;
-	color: #989898;
-  border-bottom: 1px solid #989898;
+  color: #989898;
 }
 .box1 img{
-  width: 100%;
   height: fit-content;
-  max-height: 400px;
-  min-width: 200px;
+  min-height: 120px;
+  min-width: 120px;
+  max-height: 200px;
+  max-width: 120px;
 }
 .box1 span {
 	font-size: 50px;
@@ -2287,27 +2287,14 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 	border-bottom: 1px solid #ffffff;
 }
 
-.box0 p {
-	text-align: center;
-	font-size: 12px;
-	color: #f2f2f2;
-}
-
-.box0:hover p {
-	color: #ff865c;
-}
-
 .box0:hover {
 	background: #ffffff;
-	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* MAIN CHART CONFIGURATION */
 .main-chart {
 	padding-top: 20px;
-}
-
-.mleft {
 }
 
 .border-head h3 {

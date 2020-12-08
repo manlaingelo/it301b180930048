@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 @section('content')
 <!-- big header -->
 <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_1.jpg);" data-stellar-background-ratio="0.5">
@@ -58,8 +59,8 @@
                      <span class="icon">
                      <i class="icon-image"></i>
                      </span>
-                     <h3>Retina Ready</h3>
-                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+                     <h3>Нэг гишүүнчлэлээр</h3>
+                     <p>Хүссэн үедээ, хүссэн фитнес клуб, бялдаржуулах төвүүдээр үйлчлүүлэн иог, аэробик, бүжиг, бие хамгаалах урлаг, теннис зэргээр хичээллэх боломжтой. Бүх төрлийн спорт, фитнесийг нэг гишүүнчлэлээр.</p>
                   </div>
                </div>
                <div class="col-md-12 col-sm-12">
@@ -67,8 +68,8 @@
                      <span class="icon">
                      <i class="icon-laptop"></i>
                      </span>
-                     <h3>Fully Responsive</h3>
-                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+                     <h3>7 ХОНОГ</h3>
+                     <p>Фитнес, спортын хамгийн өргөн сонголт. Хэзээ ч уйдахгүй!</p>
                   </div>
                </div>
                <div class="col-md-12 col-sm-12">
@@ -76,8 +77,8 @@
                      <span class="icon">
                      <i class="icon-air-play"></i>
                      </span>
-                     <h3>Web Starter</h3>
-                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+                     <h3>Зөвөлгөө</h3>
+                     <p>Ганцхан товч дараад л таалагдсан үйлчилгээгээ захиална.</p>
                   </div>
                </div>
             </div>
@@ -90,24 +91,24 @@
    <div class="container">
       <div class="row animate-box">
          <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-            <h2>Our Latest Work</h2>
-            <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+            <h2>Бидний санал болгож буй зүйлс</h2>
+            <p>Хэрэгцээт дасгал хөдөлгөөн, эрүүл хооллотын талаарх мэдээ мэдээллийг танд хүргэнэ.</p>
          </div>
       </div>
    </div>
    <div class="project-content">
       <div class="col-forth">
-         <div class="project animate-box" style="background-image:url(images/project-8.jpg);">
+         <div class="project animate-box" style="background-image:url({{ Voyager::image( $page->image ) }});">
             <a href="#" class="desc">
                <span>Application</span>
                <h3>Project Name</h3>
             </a>
          </div>
-      </div>
+      </div>  
       <div class="col-forth">
-         <div class="project animate-box" style="background-image:url(images/project-1.jpg);">
+         <div class="project animate-box" style="background-image:url({{setting('site.logo')}});">
             <a href="#" class="desc">
-               <span>Application</span>
+               <span></span>
                <h3>Project Name</h3>
             </a>
          </div>
@@ -131,68 +132,22 @@
    </div>
 </div>
 <!-- 4th  -->
-<div id="fh5co-testimonial" class="fh5co-bg-section">
-   <div class="container">
-      <div class="row animate-box">
-         <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-            <h2>Happy Clients</h2>
-         </div>
-      </div>
-      <div class="row">
-         <div class="col-md-10 col-md-offset-1">
-            <div class="row animate-box">
-               <div class="owl-carousel owl-carousel-fullwidth">
-                  <div class="item">
-                     <div class="testimony-slide active text-center">
-                        <figure>
-                           <img src="images/person_1.jpg" alt="user">
-                        </figure>
-                        <span>Jean Doe, via <a href="#" class="twitter">Twitter</a></span>
-                        <blockquote>
-                           <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-                        </blockquote>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="testimony-slide active text-center">
-                        <figure>
-                           <img src="images/person_2.jpg" alt="user">
-                        </figure>
-                        <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-                        <blockquote>
-                           <p>&ldquo;Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-                        </blockquote>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="testimony-slide active text-center">
-                        <figure>
-                           <img src="images/person_3.jpg" alt="user">
-                        </figure>
-                        <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-                        <blockquote>
-                           <p>&ldquo;Far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-                        </blockquote>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
+
 <!-- 5th -->
 <div id="fh5co-started">
    <div class="container">
       <div class="row animate-box">
          <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-            <h2>Lets Get Started</h2>
-            <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+            <h2>ИМЭЙЛЭЭ БҮРТГҮҮЛЭХ</h2>
+            <p>Шинэ мэдээ, мэдээллээс хэзээ ч хоцрохгүй.</p>
          </div>
       </div>
       <div class="row animate-box">
          <div class="col-md-8 col-md-offset-2 text-center">
-            <p><a href="#" class="btn btn-default btn-lg">Get in Touch</a></p>
+         <form>
+            <input type="email" id="login" class="fadeIn second" name="login" placeholder="mail">
+            <p><a type="button" class="btn btn-default btn-lg">Get in Touch</a></p>
+            </form>
          </div>
       </div>
    </div>
@@ -202,35 +157,23 @@
    <div class="container">
       <div class="row row-pb-md">
          <div class="col-md-4 fh5co-widget">
-            <h3>A Little About Run.</h3>
-            <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+            <h3>Фитнесс сайтын тухай</h3>
+            <p>Фитнесс сайт бол шинэ зууны фитнесийн гишүүнчлэл юм. Өдөр бүр шинэ хөдөлгөөн хийж, өөрийн биед таарсан фитнес болон спортын төрлийг олох боломжийг танд олгоно.</p>
             <p><a class="btn btn-primary btn-outline with-arrow" href="#">Learn More <i class="icon-arrow-right"></i></a></p>
          </div>
-         <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+         <div class="col-md-3 col-sm-4 col-xs-6 col-md-push-1">
             <ul class="fh5co-footer-links">
-               <li><a href="#">About</a></li>
-               <li><a href="#">Help</a></li>
-               <li><a href="#">Contact</a></li>
-               <li><a href="#">Terms</a></li>
-               <li><a href="#">Meetups</a></li>
+               <li><a href="#"> БИДНИЙ ТУХАЙ</a></li>
+               <li><a href="#">ҮЙЛЧИЛГЭЭНИЙ НӨХЦӨЛ</a></li>
+               <li><a href="#">НУУЦЛАЛЫН НӨХЦӨЛ</a></li>
+               <li><a href="#">ТӨЛБӨРИЙН ТУХАЙ</a></li>
             </ul>
          </div>
-         <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+         <div class="col-md-3 col-sm-4 col-xs-6 col-md-push-1">
             <ul class="fh5co-footer-links">
-               <li><a href="#">Shop</a></li>
-               <li><a href="#">Privacy</a></li>
-               <li><a href="#">Testimonials</a></li>
-               <li><a href="#">Handbook</a></li>
-               <li><a href="#">Held Desk</a></li>
-            </ul>
-         </div>
-         <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
-            <ul class="fh5co-footer-links">
-               <li><a href="#">Find Designers</a></li>
-               <li><a href="#">Find Developers</a></li>
-               <li><a href="#">Teams</a></li>
-               <li><a href="#">Advertise</a></li>
-               <li><a href="#">API</a></li>
+               <li><p>Танд ямар нэгэн асуулт байвал бидэнтэй утсаар эсхүл имэйлээр холбогдож болно.</p></li>
+               <li><a href="#">{{Auth::user()->email}}</a></li>
+               <li><a href="#">#1301, 13 ДАВХАР, СЭНТРАЛ ТАУЭР, ИХ ЭЗЭН ЧИНГИС ХААНЫ НЭРЭМЖИТ ТАЛБАЙ 2, СҮХБААТАР ДҮҮРЭГ, УЛААНБААТАР, МОНГОЛ УЛС, 14200</a></li>
             </ul>
          </div>
       </div>

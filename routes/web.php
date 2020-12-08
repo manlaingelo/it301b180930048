@@ -20,6 +20,7 @@ Auth::routes();
 Route::prefix('home')->group(function () {
   Route::get('/', function () {
     $posts = TCG\Voyager\Models\Post::all();
+    
     return view('home', compact('posts'));
   });
   Route::get('/schedule', function(){
