@@ -12,7 +12,9 @@
                   @foreach($pages as $page)
                   @if($page->slug=="logo")
                      <h1> <strong>{{ $page->title }}</strong> <br/>{{ $page->excerpt }}</h1>
-                     <p><a href="#" class="btn btn-primary btn-lg with-arrow">Бүртгүүлэх</a></p>
+                     @if (Route::has('register'))
+                         <a href="{{ route('register') }}" class="btn btn-primary btn-lg with-arrow">{{ __('Бүртгүүлэх') }}</a>
+                      @endif
                   @endif
                   @endforeach
                </div>
@@ -21,7 +23,7 @@
          <div class="col-sm-4">
             @foreach($pages as $page)
             <div class="welcome-logo">
-               @if($page->slug=="logo")
+               @if($page->id==1)
                   <img src="{{ Voyager::image( $page->image ) }}" class="imagelogo">
                @endif
             </div> 
@@ -39,7 +41,7 @@
          <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
             <h2>ХҮССЭН ҮЕДЭЭ, ХҮССЭН ГАЗРАА</h2>
             @foreach($pages as $page)
-               @if($page->slug=="logo")
+               @if($page->id==1)
                  <p> {{$page->body}} </p>
                @endif
               
@@ -97,42 +99,18 @@
       </div>
    </div>
    <div class="project-content">
-      <div class="col-forth">
-         <div class="project animate-box" style="background-image:url({{ Voyager::image( $page->image ) }});">
-            <a href="#" class="desc">
-               <span>Application</span>
-               <h3>Project Name</h3>
-            </a>
-         </div>
-      </div>
       @foreach($posts as $post)
       @if($post->category_id==2)
       <div class="col-forth">
          <div class="project animate-box" style="background-image:url({{ Voyager::image( $post->image ) }});">
-            <a href="#" class="desc">
+            <a href="/home/{{$post->slug}}" class="desc">
                <span>{{ $post->title }}</span>
-               <h3>Project Name</h3>
+               <h3>{{ $post->excerpt }} </h3>
             </a>
          </div>
       </div>
       @endif
       @endforeach
-      <div class="col-forth">
-         <div class="project animate-box" style="background-image:url(images/project-2.jpg);">
-            <a href="#" class="desc">
-               <span>Application</span>
-               <h3>Project Name</h3>
-            </a>
-         </div>
-      </div>
-      <div class="col-forth">
-         <div class="project animate-box" style="background-image:url(images/project-3.jpg);">
-            <a href="#" class="desc">
-               <span>Application</span>
-               <h3>Project Name</h3>
-            </a>
-         </div>
-      </div>
    </div>
 </div>
 <!-- 4th  -->
@@ -150,7 +128,7 @@
          <div class="col-md-8 col-md-offset-2 text-center">
          <form>
             <input type="email" id="login" class="fadeIn second" name="login" placeholder="mail">
-            <p><a type="button" class="btn btn-default btn-lg">Get in Touch</a></p>
+            <p><a type="button" class="btn btn-default btn-lg">Илгээх</a></p>
             </form>
          </div>
       </div>
@@ -163,7 +141,7 @@
          <div class="col-md-4 fh5co-widget">
             <h3>Фитнесс сайтын тухай</h3>
             <p>Фитнесс сайт бол шинэ зууны фитнесийн гишүүнчлэл юм. Өдөр бүр шинэ хөдөлгөөн хийж, өөрийн биед таарсан фитнес болон спортын төрлийг олох боломжийг танд олгоно.</p>
-            <p><a class="btn btn-primary btn-outline with-arrow" href="#">Learn More <i class="icon-arrow-right"></i></a></p>
+            <p><a class="btn btn-primary btn-outline with-arrow" href="#">Дэлгэрэнгүй<i class="icon-arrow-right"></i></a></p>
          </div>
          <div class="col-md-3 col-sm-4 col-xs-6 col-md-push-1">
             <ul class="fh5co-footer-links">
@@ -176,7 +154,7 @@
          <div class="col-md-3 col-sm-4 col-xs-6 col-md-push-1">
             <ul class="fh5co-footer-links">
                <li><p>Танд ямар нэгэн асуулт байвал бидэнтэй утсаар эсхүл имэйлээр холбогдож болно.</p></li>
-               <li><a href="#">{{Auth::user()->email}}</a></li>
+               <li><a href="#">b180930048@must.edu.mn</a></li>
                <li><a href="#">#1301, 13 ДАВХАР, СЭНТРАЛ ТАУЭР, ИХ ЭЗЭН ЧИНГИС ХААНЫ НЭРЭМЖИТ ТАЛБАЙ 2, СҮХБААТАР ДҮҮРЭГ, УЛААНБААТАР, МОНГОЛ УЛС, 14200</a></li>
             </ul>
          </div>

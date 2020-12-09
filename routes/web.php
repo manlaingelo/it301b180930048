@@ -11,34 +11,25 @@
 |
 middleware('role:superadministrator|administrator|editor|author|contributor')->
 */
-Route::get('/', function () {
-  $pages = TCG\Voyager\Models\Page::all();
-  $posts = TCG\Voyager\Models\Post::all();
-  return view('welcome',compact('pages','posts'));
-});
 Auth::routes();
+Route::get('/', 'WelcomeController@index');
+Route::get('/aboutus', 'AboutusController@index');
+Route::get('/contactus', 'ContactUsController@index');
+Route::get('/services', 'ServicesController@index');
 
 Route::prefix('home')->group(function () {
-  Route::get('/', function () {
-    $posts = TCG\Voyager\Models\Post::all();
-    
-    return view('home', compact('posts'));
-  });
+  Route::get('/', 'HomeController@index');
+  Route::get('/profile', 'ProfileController@index');
   Route::get('/schedule', function(){
     return view('schedules');
   });
   Route::get('/payment', function(){
     return view('payments');
   });
-  Route::get('/profile', function () {
-    $route=Auth::routes();
-    return view('profile',compact('route'));
-  });
-});
-
-Route::get('home/{slug}', function($slug){
-$post = TCG\Voyager\Models\Post::where('slug', '=', $slug)->firstOrFail();
-return view('posts', compact('post'));
+  Route::get('/{slug}', function($slug){
+    $post = TCG\Voyager\Models\Post::where('slug', '=', $slug)->firstOrFail();
+    return view('posts', compact('post'));
+    });
 });
 
 Route::group(['prefix' => 'admin'], function () {

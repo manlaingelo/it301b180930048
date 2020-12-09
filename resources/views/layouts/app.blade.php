@@ -43,18 +43,22 @@
 					</div>
 					<div class="col-xs-8 text-right menu-1">
 						<ul>
+                        <li class="active"><a href="{{ url('/aboutus') }}">Бидний тухай</a></li>
+							<li class="has-dropdown">
+								<a href="{{ url('/services') }}">Үйлчилгээ</a>
+								<ul class="dropdown">
+									<li><a href="#">Дасгал хөдөлгөөн</a></li>
+									<li><a href="#">Эрүүл хооллолт</a></li>
+									<li><a href="#">Гэрээсээ</a></li>
+								</ul>
+							</li>
+							<li><a href="{{ url('/contactus') }}">Бидэнтэй холбогдох</a></li>
 							@guest
                             @if (Route::has('login'))
                                 <li style="color:white;">
-                                    <a href="{{ route('login') }}">{{ __('Нэвтрэх') }}</a>
+                                    <li class="btn-cta"><a href="{{ route('login') }}"><span>{{ __('Нэвтрэх') }}</span></a></li>
                                 </li>
-                            @endif
-                            
-                            @if (Route::has('register'))
-                                <li>
-                                    <a href="{{ route('register') }}">{{ __('Бүртгүүлэх') }}</a>
-                                </li>
-                            @endif
+                            @endif	
                         @else
                         <li>      
                         <div id="fh5co-logo"><a href="{{ url('/home') }}">   Сайн уу {{ Auth::user()->name }}<span>.</span></a></div>        
@@ -133,7 +137,5 @@
     <script src="js/jquery.scrollTo.min.js"></script>
     <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
     <script src="js/jquery.sparkline.js"></script>
-
-    </script>
 </body>
 </html>

@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
+use TCG\Voyager\Models\Post;
 
 use Illuminate\Http\Request;
-use TCG\Voyager\Models\Post;
-class HomeController extends Controller
+
+class ProfileController extends Controller
 {
-    /**
+     /**
      * Create a new controller instance.
      *
      * @return void
@@ -23,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-       $posts = Post::all();
-        return view('home', compact('posts'));
+        $route=Auth::routes();
+        return view('profile',compact('route'));
     }
 }
