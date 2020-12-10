@@ -168,5 +168,6 @@
       <script type="text/javascript" src="{{ voyager_asset('js/app.js') }}"></script>
       <script src="/js/fullcalendar.min.js"></script> 
       <script src="/js/calendar-conf-events.js"></script>  
+      
    </body>
 </html>

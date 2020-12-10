@@ -20,16 +20,21 @@ Route::get('/services', 'ServicesController@index');
 Route::prefix('home')->group(function () {
   Route::get('/', 'HomeController@index');
   Route::get('/profile', 'ProfileController@index');
-  Route::get('/schedule', function(){
-    return view('schedules');
-  });
-  Route::get('/payment', function(){
-    return view('payments');
-  });
+  Route::get('/schedule', 'SchedulesController@index');
+  Route::get('/payment', 'PaymenthistoryController@index');
+
   Route::get('/{slug}', function($slug){
     $post = TCG\Voyager\Models\Post::where('slug', '=', $slug)->firstOrFail();
-    return view('posts', compact('post'));
+    
+    auth()->setDefaultDriver(app('VoyagerGuard'));
+
+        if (!Auth::guest()) {
+            return view('posts', compact('post'));
+        }
+        $urlLogin = route('login');
+        return redirect()->guest($urlLogin);
     });
+    
 });
 
 Route::group(['prefix' => 'admin'], function () {

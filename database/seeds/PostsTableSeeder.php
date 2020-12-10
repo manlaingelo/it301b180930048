@@ -321,16 +321,16 @@ class PostsTableSeeder extends Seeder
         Permission::generateFor('posts');
 
         //Content
-        $post = $this->findPost('lorem-ipsum-post');
+        $post = $this->findPost('Эрүүл хоол');
         if (!$post->exists) {
             $post->fill([
-                'title'            => 'Lorem Ipsum Post',
+                'title'            => 'Эрүүл хоол',
                 'author_id'        => 0,
                 'seo_title'        => null,
-                'excerpt'          => 'This is the excerpt for the Lorem Ipsum Post',
-                'body'             => '<p>This is the body of the lorem ipsum post</p>',
-                'image'            => 'posts/post1.jpg',
-                'slug'             => 'lorem-ipsum-post',
+                'excerpt'          => 'Зөв зохистой хоол',
+                'body'             => '<p>эрүүл хоол</p>',
+                'image'            => 'posts\December2020\B5ktH8dNKxMzbVcWElik.jpg',
+                'slug'             => 'er-l-hool',
                 'meta_description' => 'This is the meta description',
                 'meta_keywords'    => 'keyword1, keyword2, keyword3',
                 'status'           => 'PUBLISHED',
@@ -338,18 +338,16 @@ class PostsTableSeeder extends Seeder
             ])->save();
         }
 
-        $post = $this->findPost('my-sample-post');
+        $post = $this->findPost('Эрүүл бие');
         if (!$post->exists) {
             $post->fill([
-                'title'     => 'My Sample Post',
+                'title'     => 'Эрүүл бие',
                 'author_id' => 0,
                 'seo_title' => null,
-                'excerpt'   => 'This is the excerpt for the sample Post',
-                'body'      => '<p>This is the body for the sample post, which includes the body.</p>
-                <h2>We can use all kinds of format!</h2>
-                <p>And include a bunch of other stuff.</p>',
-                'image'            => 'posts/post2.jpg',
-                'slug'             => 'my-sample-post',
+                'excerpt'   => 'Чийрэг',
+                'body'      => '<p>аааааааа</p>',
+                'image'            => 'posts\December2020\f7FCoYsLMyPJHp4vjmh2.png',
+                'slug'             => 'er-l-bie',
                 'meta_description' => 'Meta Description for sample post',
                 'meta_keywords'    => 'keyword1, keyword2, keyword3',
                 'status'           => 'PUBLISHED',

@@ -39,7 +39,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-4">
-						<div id="fh5co-logo"><a href="{{ url('/') }}">Fitness site</a></div>
+						<div id="fh5co-logo"><a href="{{ url('/') }}">Fitness site<span>.</span></a></div>
 					</div>
 					<div class="col-xs-8 text-right menu-1">
 						<ul>
@@ -61,7 +61,7 @@
                             @endif	
                         @else
                         <li>      
-                        <div id="fh5co-logo"><a href="{{ url('/home') }}">   Сайн уу {{ Auth::user()->name }}<span>.</span></a></div>        
+                      <a href="{{ url('/home') }}">   Сайн уу {{ Auth::user()->name }}</a>
                         </li>
                         
                         @endguest
@@ -72,61 +72,42 @@
 			</div>
 		</div>
 	</nav>
-        <!-- <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color: #ffb002;">
-            <div class="container" >
-                <a class="navbar-brand" href="{{ url('/') }}">Fitness site
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                     Left Side Of Navbar
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                     Right Side Of Navbar 
-                    <ul class="navbar-nav ml-auto">
-                         Authentication Links
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-                            
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav> -->
     </div>
     @yield('content')
-    	<!-- jQuery -->
+    <footer id="fh5co-footer" role="contentinfo">
+   <div class="container">
+      <div class="row row-pb-md">
+         <div class="col-md-4 fh5co-widget">
+            <h3>Фитнесс сайтын тухай</h3>
+            <p>Фитнесс сайт бол шинэ зууны фитнесийн гишүүнчлэл юм. Өдөр бүр шинэ хөдөлгөөн хийж, өөрийн биед таарсан фитнес болон спортын төрлийг олох боломжийг танд олгоно.</p>
+            <p><a class="btn btn-primary btn-outline with-arrow" href="/aboutus">Дэлгэрэнгүй<i class="icon-arrow-right"></i></a></p>
+         </div>
+         <div class="col-md-3 col-sm-4 col-xs-6 col-md-push-1">
+            <ul class="fh5co-footer-links">
+               <li><a href="/aboutus"> БИДНИЙ ТУХАЙ</a></li>
+               <li><a href="/services">ҮЙЛЧИЛГЭЭНИЙ НӨХЦӨЛ</a></li>
+               <li><a href="/contactus">НУУЦЛАЛЫН НӨХЦӨЛ</a></li>
+               <li><a href="/services">ТӨЛБӨРИЙН ТУХАЙ</a></li>
+            </ul>
+         </div>
+         <div class="col-md-3 col-sm-4 col-xs-6 col-md-push-1">
+            <ul class="fh5co-footer-links">
+               <li><p>Танд ямар нэгэн асуулт байвал бидэнтэй утсаар эсхүл имэйлээр холбогдож болно.</p></li>
+               <li><a href="#">b180930048@must.edu.mn</a></li>
+               <li><a href="#">#1301, 13 ДАВХАР, СЭНТРАЛ ТАУЭР, ИХ ЭЗЭН ЧИНГИС ХААНЫ НЭРЭМЖИТ ТАЛБАЙ 2, СҮХБААТАР ДҮҮРЭГ, УЛААНБААТАР, МОНГОЛ УЛС, 14200</a></li>
+            </ul>
+         </div>
+      </div>
+      <div class="row copyright">
+         <div class="col-md-12 text-center">
+            <p>
+               b180930048 munkhmanlai
+            </p>
+         </div>
+      </div>
+   </div>
+</footer>
+    <!-- jQuery -->
 	<!-- Main -->
 	<script src="js/main.js"></script>
     

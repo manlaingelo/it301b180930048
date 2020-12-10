@@ -10,7 +10,7 @@
             <div class="display-t">
                <div class="display-tc animate-box" data-animate-effect="fadeIn">
                   @foreach($pages as $page)
-                  @if($page->slug=="logo")
+                  @if($page->slug=="welcome")
                      <h1> <strong>{{ $page->title }}</strong> <br/>{{ $page->excerpt }}</h1>
                      @if (Route::has('register'))
                          <a href="{{ route('register') }}" class="btn btn-primary btn-lg with-arrow">{{ __('Бүртгүүлэх') }}</a>
@@ -127,55 +127,14 @@
       <div class="row animate-box">
          <div class="col-md-8 col-md-offset-2 text-center">
          <form>
-            <input type="email" id="login" class="fadeIn second" name="login" placeholder="mail">
+         <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
             <p><a type="button" class="btn btn-default btn-lg">Илгээх</a></p>
             </form>
          </div>
       </div>
    </div>
 </div>
-<!-- footer -->
-<footer id="fh5co-footer" role="contentinfo">
-   <div class="container">
-      <div class="row row-pb-md">
-         <div class="col-md-4 fh5co-widget">
-            <h3>Фитнесс сайтын тухай</h3>
-            <p>Фитнесс сайт бол шинэ зууны фитнесийн гишүүнчлэл юм. Өдөр бүр шинэ хөдөлгөөн хийж, өөрийн биед таарсан фитнес болон спортын төрлийг олох боломжийг танд олгоно.</p>
-            <p><a class="btn btn-primary btn-outline with-arrow" href="#">Дэлгэрэнгүй<i class="icon-arrow-right"></i></a></p>
-         </div>
-         <div class="col-md-3 col-sm-4 col-xs-6 col-md-push-1">
-            <ul class="fh5co-footer-links">
-               <li><a href="#"> БИДНИЙ ТУХАЙ</a></li>
-               <li><a href="#">ҮЙЛЧИЛГЭЭНИЙ НӨХЦӨЛ</a></li>
-               <li><a href="#">НУУЦЛАЛЫН НӨХЦӨЛ</a></li>
-               <li><a href="#">ТӨЛБӨРИЙН ТУХАЙ</a></li>
-            </ul>
-         </div>
-         <div class="col-md-3 col-sm-4 col-xs-6 col-md-push-1">
-            <ul class="fh5co-footer-links">
-               <li><p>Танд ямар нэгэн асуулт байвал бидэнтэй утсаар эсхүл имэйлээр холбогдож болно.</p></li>
-               <li><a href="#">b180930048@must.edu.mn</a></li>
-               <li><a href="#">#1301, 13 ДАВХАР, СЭНТРАЛ ТАУЭР, ИХ ЭЗЭН ЧИНГИС ХААНЫ НЭРЭМЖИТ ТАЛБАЙ 2, СҮХБААТАР ДҮҮРЭГ, УЛААНБААТАР, МОНГОЛ УЛС, 14200</a></li>
-            </ul>
-         </div>
-      </div>
-      <div class="row copyright">
-         <div class="col-md-12 text-center">
-            <p>
-               designed by mike
-            </p>
-            <p>
-            <ul class="fh5co-social-icons">
-               <li><a href="#"><i class="icon-twitter"></i></a></li>
-               <li><a href="#"><i class="icon-facebook"></i></a></li>
-               <li><a href="#"><i class="icon-linkedin"></i></a></li>
-               <li><a href="#"><i class="icon-dribbble"></i></a></li>
-            </ul>
-            </p>
-         </div>
-      </div>
-   </div>
-</footer>
+
 </div>
 <div class="gototop js-top">
    <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>

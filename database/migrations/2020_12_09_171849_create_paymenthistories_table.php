@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBookingsTable extends Migration
+class CreatePaymenthistoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,14 @@ class CreateBookingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('bookings', function (Blueprint $table) {
+        Schema::create('paymenthistories', function (Blueprint $table) {
             $table->id();
+            $table->string('usermail');
+            $table->integer('paymentid');
+            $table->date('start_at');
+            $table->string('months');
+            $table->string('descript');
+            $table->boolean('paystatus');
             $table->timestamps();
         });
     }
@@ -26,6 +32,6 @@ class CreateBookingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bookings');
+        Schema::dropIfExists('paymenthistories');
     }
 }

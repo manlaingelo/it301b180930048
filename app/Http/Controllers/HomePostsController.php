@@ -5,7 +5,7 @@ use TCG\Voyager\Models\Post;
 use TCG\Voyager\Models\Page;
 use Illuminate\Http\Request;
 
-class ContactUsController extends Controller
+class HomePostsController extends Controller
 {
     public function index()
     {

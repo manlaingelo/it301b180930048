@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 use TCG\Voyager\Models\Post;
-
 use Illuminate\Http\Request;
-
+use Auth;
 class ProfileController extends Controller
 {
      /**
